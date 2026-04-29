@@ -155,7 +155,7 @@ function App() {
                   <ul className="profile-facts">
                     <li>
                       <span>Focus</span>
-                      <strong>Fintech APIs, RAG systems, agent workflows</strong>
+                      <strong>Backend APIs, RAG systems, AI agent workflows</strong>
                     </li>
                     <li>
                       <span>Strength</span>
