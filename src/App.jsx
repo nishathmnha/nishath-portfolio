@@ -6,7 +6,7 @@ const hasUrl = (item) => typeof item?.url === "string" && item.url.trim().length
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
-  const [activeSection, setActiveSection] = useState("demo");
+  const [activeSection, setActiveSection] = useState("stack");
 
   useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
@@ -171,6 +171,41 @@ function App() {
                 </div>
               </div>
             </aside>
+          </div>
+        </section>
+
+        <section className="section section-stack" id="stack">
+          <div className="container">
+            <div className="section-heading stack-heading">
+              <p className="eyebrow">Technical Stack</p>
+              <h2>AI-native engineering stack across agents, backend systems, and typed product interfaces.</h2>
+              <p className="section-copy">
+                The tools I use most often to build reliable APIs, agentic workflows, RAG systems, and production-ready
+                TypeScript AI applications.
+              </p>
+            </div>
+
+            <div className="stack-groups">
+              {portfolio.technicalStack.map((group) => (
+                <article key={group.category} className="stack-group">
+                  <div className="stack-group-copy">
+                    <h3>{group.category}</h3>
+                    <p>{group.description}</p>
+                  </div>
+
+                  <div className="stack-grid">
+                    {group.items.map((item) => (
+                      <div key={group.category + item.name} className="stack-tile">
+                        <span className={`stack-icon ${item.darkIcon ? "is-dark" : ""}`}>
+                          <img src={item.icon} alt="" aria-hidden="true" />
+                        </span>
+                        <strong>{item.name}</strong>
+                      </div>
+                    ))}
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

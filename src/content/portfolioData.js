@@ -2,6 +2,7 @@
 
 const portfolio = {
   nav: [
+    { label: "Stack", href: "#stack" },
     { label: "Demo", href: "#demo" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
@@ -14,11 +15,47 @@ const portfolio = {
     { value: "3", label: "working languages" }
   ],
   strengths: [
+    "TypeScript + Next.js",
+    "Vercel AI SDK",
     "Java + Spring",
     "Python + FastAPI",
     "Kafka + PostgreSQL",
     "RAG + LangGraph",
     "Docker + Kubernetes"
+  ],
+  technicalStack: [
+    {
+      category: "AI Engineering",
+      description: "Agent orchestration, observability, and AI-native application delivery.",
+      items: [
+        { name: "LangChain", icon: "/stack-icons/langchain.png", darkIcon: true },
+        { name: "LangGraph", icon: "/stack-icons/langchain.png", darkIcon: true },
+        { name: "LangSmith", icon: "/stack-icons/langchain.png", darkIcon: true },
+        { name: "Spring AI", icon: "/stack-icons/spring.svg" },
+        { name: "Vercel AI SDK", icon: "/stack-icons/vercel.svg" }
+      ]
+    },
+    {
+      category: "Backend Engineering",
+      description: "Production APIs, reactive services, and enterprise integration.",
+      items: [
+        { name: "Python", icon: "/stack-icons/python.svg" },
+        { name: "FastAPI", icon: "/stack-icons/fastapi.svg" },
+        { name: "Django", icon: "/stack-icons/django.svg" },
+        { name: "Java", icon: "/stack-icons/openjdk.svg" },
+        { name: "Spring Boot", icon: "/stack-icons/springboot.svg" },
+        { name: "Spring WebFlux", icon: "/stack-icons/spring.svg" }
+      ]
+    },
+    {
+      category: "TypeScript Ecosystem",
+      description: "Modern, typed product interfaces and full-stack AI experiences.",
+      items: [
+        { name: "TypeScript", icon: "/stack-icons/typescript.svg" },
+        { name: "Next.js", icon: "/stack-icons/nextdotjs.svg" },
+        { name: "React", icon: "/stack-icons/react.svg" }
+      ]
+    }
   ],
   experience: [
     {
@@ -211,6 +248,18 @@ const portfolio = {
   ],
   demoVideos: [
     {
+      title: "Learning-Focused Agentic RAG Platform",
+      platform: "LinkedIn",
+      summary:
+        "A Next.js and TypeScript RAG platform built with Prisma, PostgreSQL, LanceDB, OpenAI, and the Vercel AI SDK, combining retrieval, tool calling, source inspection, lesson generation, and quiz generation.",
+      thumbnail: "/demo-thumb-vercel-ai-sdk-rag.png",
+      visualTitle: "Agentic RAG Learning Platform",
+      visualItems: ["Document ingestion", "OpenAI embeddings", "LanceDB retrieval", "ToolLoopAgent responses"],
+      ctaLabel: "Watch demo",
+      linkLabel: "Open showcase",
+      url: "https://www.linkedin.com/posts/ahamed-nishath_aiengineering-agenticai-rag-ugcPost-7467620269319188480-4TFU/"
+    },
+    {
       title: "Multi-agent HR AI Assistant Demo",
       platform: "LinkedIn",
       summary:
@@ -231,18 +280,6 @@ const portfolio = {
       ctaLabel: "Watch demo",
       linkLabel: "Open showcase",
       url: "https://www.linkedin.com/posts/ahamed-nishath_vulnerabilities-in-cicd-pipelines-often-ugcPost-7456980329489227777-Wu4E/"
-    },
-    {
-      title: "Learning-Focused Agentic RAG Platform",
-      platform: "LinkedIn",
-      summary:
-        "A Next.js and TypeScript RAG platform built with Prisma, PostgreSQL, LanceDB, OpenAI, and the Vercel AI SDK, combining retrieval, tool calling, source inspection, lesson generation, and quiz generation.",
-      thumbnail: "/demo-thumb-vercel-ai-sdk-rag.png",
-      visualTitle: "Agentic RAG Learning Platform",
-      visualItems: ["Document ingestion", "OpenAI embeddings", "LanceDB retrieval", "ToolLoopAgent responses"],
-      ctaLabel: "Watch demo",
-      linkLabel: "Open showcase",
-      url: "https://www.linkedin.com/posts/ahamed-nishath_aiengineering-agenticai-rag-ugcPost-7467620269319188480-4TFU/"
     }
   ],
   profiles: [
