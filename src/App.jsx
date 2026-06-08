@@ -36,8 +36,6 @@ function App() {
   const publicProfiles = useMemo(() => portfolio.profiles.filter(hasUrl), []);
   const publicMedia = useMemo(() => portfolio.media.filter(hasUrl), []);
   const publicVideos = useMemo(() => portfolio.demoVideos.filter(hasUrl), []);
-  const featuredVideo = publicVideos[0];
-  const additionalVideos = publicVideos.slice(1);
 
   const handleCopy = async () => {
     try {
@@ -176,54 +174,52 @@ function App() {
           </div>
         </section>
 
-        {featuredVideo ? (
+        {publicVideos.length > 0 ? (
           <section className="section section-demo" id="demo">
             <div className="container demo-layout">
               <div className="section-heading showcase-heading">
                 <p className="eyebrow">Demo</p>
-                <h2>Featured product walkthrough.</h2>
+                <h2>Featured product walkthroughs.</h2>
                 <p className="section-copy">
-                  A closer look at how the multi-agent HR assistant routes requests, validates queries, and resolves
-                  ambiguity before responding.
+                  A closer look at selected AI builds, from multi-agent assistants to agentic RAG and CI/CD remediation workflows.
                 </p>
               </div>
 
-              <article className="featured-demo-card">
-                <a className="featured-demo-thumb" href={featuredVideo.url} target="_blank" rel="noreferrer">
-                  {featuredVideo.thumbnail ? (
-                    <img src={featuredVideo.thumbnail} alt={featuredVideo.title} />
-                  ) : (
-                    <div className="featured-demo-placeholder">
-                      <span>Demo Preview</span>
-                    </div>
-                  )}
-                  <span className="featured-demo-play">Watch demo</span>
-                </a>
+              <div className="featured-demo-list">
+                {publicVideos.map((video) => (
+                  <article key={video.title} className="featured-demo-card">
+                    <a className="featured-demo-thumb" href={video.url} target="_blank" rel="noreferrer">
+                      {video.thumbnail ? (
+                        <img src={video.thumbnail} alt={video.title} />
+                      ) : (
+                        <div className="featured-demo-placeholder">
+                          <div className="demo-placeholder-card">
+                            <span>Project Flow</span>
+                            <strong>{video.visualTitle || "Demo Preview"}</strong>
+                            {video.visualItems?.length > 0 ? (
+                              <ul>
+                                {video.visualItems.map((item) => (
+                                  <li key={item}>{item}</li>
+                                ))}
+                              </ul>
+                            ) : null}
+                          </div>
+                        </div>
+                      )}
+                      <span className="featured-demo-play">{video.ctaLabel || "Open showcase"}</span>
+                    </a>
 
-                <div className="featured-demo-body">
-                  <p className="card-label">{featuredVideo.platform}</p>
-                  <h3>{featuredVideo.title}</h3>
-                  <p>{featuredVideo.summary}</p>
-                  <a className="inline-link" href={featuredVideo.url} target="_blank" rel="noreferrer">
-                    Open showcase
-                  </a>
-                </div>
-              </article>
-
-              {additionalVideos.length > 0 ? (
-                <div className="demo-grid demo-grid-secondary">
-                  {additionalVideos.map((video) => (
-                    <article key={video.title} className="demo-card">
+                    <div className="featured-demo-body">
                       <p className="card-label">{video.platform}</p>
                       <h3>{video.title}</h3>
                       <p>{video.summary}</p>
                       <a className="inline-link" href={video.url} target="_blank" rel="noreferrer">
-                        Watch video
+                        {video.linkLabel || "Open showcase"}
                       </a>
-                    </article>
-                  ))}
-                </div>
-              ) : null}
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </section>
         ) : null}

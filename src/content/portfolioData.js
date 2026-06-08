@@ -9,7 +9,7 @@ const portfolio = {
     { label: "Contact", href: "#contact" }
   ],
   heroMetrics: [
-    { value: "6+", label: "featured builds" },
+    { value: "8", label: "featured builds" },
     { value: "5", label: "AI credentials" },
     { value: "3", label: "working languages" }
   ],
@@ -48,6 +48,46 @@ const portfolio = {
     }
   ],
   projects: [
+    {
+      category: "Agentic RAG",
+      title: "Learning-Focused Agentic RAG Platform",
+      status: "Public Learning Build",
+      summary:
+        "A TypeScript-based RAG application that combines document ingestion, vector retrieval, tool calling, and an agent layer for grounded lesson-aware responses.",
+      impact: [
+        "Explores production-oriented AI application patterns in the TypeScript ecosystem with the Vercel AI SDK.",
+        "Adds agent capabilities on top of a traditional RAG pipeline without disrupting the underlying retrieval workflow."
+      ],
+      stack: ["Next.js", "TypeScript", "Vercel AI SDK", "Prisma", "PostgreSQL", "LanceDB", "OpenAI"],
+      links: [
+        {
+          label: "GitHub",
+          url: "https://lnkd.in/gs4sXExy"
+        },
+        {
+          label: "LinkedIn Write-up",
+          url: "https://www.linkedin.com/posts/ahamed-nishath_aiengineering-agenticai-rag-ugcPost-7467620269319188480-4TFU/"
+        }
+      ]
+    },
+    {
+      category: "AI DevSecOps",
+      title: "AI-Driven CI/CD Vulnerability Remediation",
+      status: "Private Architecture Build",
+      summary:
+        "A LangGraph-based remediation workflow that connects Jenkins, Trivy, FastAPI, OpenAI, and GitHub to analyze dependency vulnerabilities and prepare safe pull-request fixes.",
+      impact: [
+        "Transforms repeated manual remediation into a structured multi-agent workflow with validation and scan feedback.",
+        "Shows practical AI use in CI/CD, dependency updates, repository automation, and controllable agent orchestration."
+      ],
+      stack: ["LangGraph", "OpenAI", "FastAPI", "Jenkins", "Trivy", "GitHub"],
+      links: [
+        {
+          label: "LinkedIn Write-up",
+          url: "https://www.linkedin.com/posts/ahamed-nishath_vulnerabilities-in-cicd-pipelines-often-ugcPost-7456980329489227777-Wu4E/"
+        }
+      ]
+    },
     {
       category: "Enterprise AI",
       title: "Data Synthesizer",
@@ -176,7 +216,33 @@ const portfolio = {
       summary:
         "Built with OpenAI, LangChain, FastAPI, and PostgreSQL. The assistant answers dynamically from the database using tool calling, safe read-only SQL, and a supervisor agent that coordinates schema lookup, query generation, and clarification flow when the request is ambiguous.",
       thumbnail: "/demo-thumb-hr-assistant.png",
+      ctaLabel: "Watch demo",
+      linkLabel: "Open showcase",
       url: "https://www.linkedin.com/feed/update/urn:li:activity:7443332031150747648/"
+    },
+    {
+      title: "AI-Driven CI/CD Vulnerability Remediation",
+      platform: "LinkedIn",
+      summary:
+        "A LangGraph remediation system that connects Jenkins, Trivy, FastAPI, OpenAI, and GitHub to analyze dependency vulnerabilities, generate safe fixes, validate changes, and automate pull request creation.",
+      thumbnail: "/demo-thumb-cicd-remediation.jpg",
+      visualTitle: "CI/CD AI Remediation Workflow",
+      visualItems: ["Jenkins + Trivy scan", "FastAPI webhook", "LangGraph agents", "GitHub pull request"],
+      ctaLabel: "Watch demo",
+      linkLabel: "Open showcase",
+      url: "https://www.linkedin.com/posts/ahamed-nishath_vulnerabilities-in-cicd-pipelines-often-ugcPost-7456980329489227777-Wu4E/"
+    },
+    {
+      title: "Learning-Focused Agentic RAG Platform",
+      platform: "LinkedIn",
+      summary:
+        "A Next.js and TypeScript RAG platform built with Prisma, PostgreSQL, LanceDB, OpenAI, and the Vercel AI SDK, combining retrieval, tool calling, source inspection, lesson generation, and quiz generation.",
+      thumbnail: "/demo-thumb-agentic-rag.jpg",
+      visualTitle: "Agentic RAG Learning Platform",
+      visualItems: ["Document ingestion", "OpenAI embeddings", "LanceDB retrieval", "ToolLoopAgent responses"],
+      ctaLabel: "Watch demo",
+      linkLabel: "Open showcase",
+      url: "https://www.linkedin.com/posts/ahamed-nishath_aiengineering-agenticai-rag-ugcPost-7467620269319188480-4TFU/"
     }
   ],
   profiles: [
