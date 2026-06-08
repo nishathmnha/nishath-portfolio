@@ -532,7 +532,7 @@ h3 {
   display: grid;
   grid-template-columns: minmax(300px, 0.95fr) minmax(0, 1fr);
   gap: 1.25rem;
-  align-items: stretch;
+  align-items: center;
   padding: 1.3rem;
   border: 1px solid rgba(20, 32, 51, 0.08);
   border-radius: 28px;
@@ -545,7 +545,7 @@ h3 {
   display: block;
   overflow: hidden;
   border-radius: 22px;
-  min-height: 280px;
+  aspect-ratio: 16 / 9;
   background: linear-gradient(135deg, #f4ece0, #f8f3eb);
   border: 1px solid rgba(20, 32, 51, 0.08);
 }
@@ -983,7 +983,7 @@ h3 {
   }
 
   .featured-demo-thumb {
-    min-height: 220px;
+    aspect-ratio: 16 / 9;
   }
 
   .project-top,
