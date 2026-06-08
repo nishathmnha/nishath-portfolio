@@ -558,6 +558,7 @@ h3 {
 
 .featured-demo-thumb img {
   object-fit: cover;
+  object-position: center top;
 }
 
 .featured-demo-placeholder {

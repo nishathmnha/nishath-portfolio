@@ -237,7 +237,7 @@ const portfolio = {
       platform: "LinkedIn",
       summary:
         "A Next.js and TypeScript RAG platform built with Prisma, PostgreSQL, LanceDB, OpenAI, and the Vercel AI SDK, combining retrieval, tool calling, source inspection, lesson generation, and quiz generation.",
-      thumbnail: "/demo-thumb-agentic-rag.jpg",
+      thumbnail: "/demo-thumb-vercel-ai-sdk-rag.png",
       visualTitle: "Agentic RAG Learning Platform",
       visualItems: ["Document ingestion", "OpenAI embeddings", "LanceDB retrieval", "ToolLoopAgent responses"],
       ctaLabel: "Watch demo",
